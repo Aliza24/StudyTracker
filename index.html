@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Study Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== APP ===================== -->
+<div class="app">
+  <nav class="rail" aria-label="Main">
+    <div class="logo"><i aria-hidden="true"></i>Study Tracker</div>
+    <a class="nav" href="#home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>Today</a>
+    <a class="nav" href="#syllabus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M9 7h6M9 11h6"/></svg>Syllabus</a>
+    <a class="nav" href="#tasks"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="m3 6 1.5 1.5L7 5M3 12l1.5 1.5L7 11M3 18l1.5 1.5L7 17"/></svg>Tasks</a>
+    <div class="spacer"></div>
+    <a class="nav signout" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3M10 17l5-5-5-5M15 12H4"/></svg>Sign out</a>
+  </nav>
+
+  <main>
+    <!-- ===================== LOGIN ===================== -->
+    <section class="login" aria-label="Sign in">
+      <div class="vortex" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="login-card">
+        <h1>
+          <span class="welcome"><span style="--i:0">Welcome</span> <span style="--i:1">to</span></span>
+          <span class="brandword" aria-label="Study Tracker"><span class="w"><span style="--i:2">S</span><span style="--i:3">t</span><span style="--i:4">u</span><span style="--i:5">d</span><span style="--i:6">y</span></span> <span class="w"><span style="--i:7">T</span><span style="--i:8">r</span><span style="--i:9">a</span><span style="--i:10">c</span><span style="--i:11">k</span><span style="--i:12">e</span><span style="--i:13">r</span></span></span>
+        </h1>
+        <p class="login-lede">Your syllabus, your daily goals and your tasks, all in one calm place.</p>
+        <p class="greet"><span class="g-named">Good to see you,</span><span class="g-anon">Good to see you.</span></p>
+        <label class="field field-name" style="--i:0"><span>Name</span><input type="text" placeholder="Your name" autocomplete="username"></label>
+        <label class="field field-pass" style="--i:1"><span>Password</span><input type="password" placeholder="••••••••" autocomplete="current-password"></label>
+        <a class="dive" href="#home">Dive in
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 6 6 0 1 0-6 6 3 3 0 1 0-3-3"/></svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ TODAY ============ -->
+    <section id="home" class="page">
+      <div class="page-head">
+        <p>Monday, 12 October. Five small goals today. Tick them off as you go and watch the ring close.</p>
+      </div>
+
+      <div class="home-grid">
+        <div class="panel goals">
+          <input type="checkbox" id="g1" class="vh" checked>
+          <input type="checkbox" id="g2" class="vh">
+          <input type="checkbox" id="g3" class="vh">
+          <input type="checkbox" id="g4" class="vh">
+          <input type="checkbox" id="g5" class="vh">
+          <div class="head"><h2>Today's goals</h2><p class="sub">Chapters and topics planned for today</p></div>
+          <div class="ring" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><span class="ring-count"></span></div>
+          <ul class="goal-list">
+            <li><label for="g1"><span class="tick"></span><span><b>Maths: Derivatives</b><small>Solve 15 chain-rule problems</small></span></label></li>
+            <li><label for="g2"><span class="tick"></span><span><b>Physics: Kinematics</b><small>Re-watch lecture 4 and make notes</small></span></label></li>
+            <li><label for="g3"><span class="tick"></span><span><b>Chemistry: Chemical bonding</b><small>Draw 10 Lewis structures</small></span></label></li>
+            <li><label for="g4"><span class="tick"></span><span><b>English: Novel study</b><small>Read 20 pages and note two themes</small></span></label></li>
+            <li><label for="g5"><span class="tick"></span><span><b>CS: Control flow</b><small>Finish the loops exercise set</small></span></label></li>
+          </ul>
+          <p class="calm">All five done. The water is still. Go take a proper break.</p>
+        </div>
+
+        <div class="panel focus">
+          <input type="checkbox" id="run" class="vh">
+          <input type="checkbox" id="pause" class="vh">
+          <div><h2>Focus session</h2><p class="sub" style="text-align:left">25 minutes on one topic, phone face down.</p></div>
+          <div class="clock" aria-hidden="true"><span class="time"></span></div>
+          <div class="focus-btns">
+            <label for="run" class="btn primary"><span class="start-txt">Start focus</span><span class="reset-txt">Reset</span></label>
+            <label for="pause" class="btn"><span class="pause-txt">Pause</span><span class="resume-txt">Resume</span></label>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>Due soon</h2>
+          <ul class="upnext">
+            <li><a href="#tasks"><span class="bar" style="--p:var(--high)"></span><span><b>Derivatives worksheet</b><small>Due tomorrow, 13 Oct</small></span></a></li>
+            <li><a href="#tasks"><span class="bar" style="--p:var(--med)"></span><span><b>Periodic trends flashcards</b><small>Due Wednesday, 14 Oct</small></span></a></li>
+            <li><a href="#tasks"><span class="bar" style="--p:var(--high)"></span><span><b>Free-fall lab report</b><small>Due Thursday, 15 Oct</small></span></a></li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h2>Syllabus at a glance</h2>
+          <div class="snap">
+            <a href="#syllabus" style="--c:#9B8AD0; --v:33%"><span>Mathematics</span><span class="track"><span></span></span><em>2/6</em></a>
+            <a href="#syllabus" style="--c:#5EA3C8; --v:50%"><span>Physics</span><span class="track"><span></span></span><em>3/6</em></a>
+            <a href="#syllabus" style="--c:#6FB59A; --v:33%"><span>Chemistry</span><span class="track"><span></span></span><em>2/6</em></a>
+            <a href="#syllabus" style="--c:#E0A95A; --v:67%"><span>Computer Sci.</span><span class="track"><span></span></span><em>4/6</em></a>
+            <a href="#syllabus" style="--c:#D98AA6; --v:17%"><span>English</span><span class="track"><span></span></span><em>1/6</em></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SYLLABUS ============ -->
+    <section id="syllabus" class="page">
+      <input type="checkbox" id="ns1" class="vh">
+      <input type="checkbox" id="ns2" class="vh">
+      <div class="syl-top">
+        <div class="page-head">
+          <h1>Syllabus</h1>
+          <p>Tick a chapter when you've finished it. The bar under each subject fills as you go.</p>
+        </div>
+        <div class="add-sub">
+          <label for="ns1" class="btn primary">+ Add subject</label>
+          <label for="ns2" class="btn primary">+ Add subject</label>
+          <p class="full">Two blank subjects are open. Fill them in below.</p>
+        </div>
+      </div>
+
+      <div class="subjects">
+        <!-- Mathematics -->
+        <article class="subject" style="--c:#9B8AD0">
+          <input type="checkbox" class="vh cin" id="ma1" checked><input type="checkbox" class="vh cin" id="ma2" checked><input type="checkbox" class="vh cin" id="ma3"><input type="checkbox" class="vh cin" id="ma4"><input type="checkbox" class="vh cin" id="ma5"><input type="checkbox" class="vh cin" id="ma6">
+          <header>
+            <h3>Mathematics</h3>
+            <p class="exam">Calculus unit test on 14 Nov</p>
+            <div class="beads" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <p class="count" data-total="6"></p>
+          </header>
+          <details open>
+            <summary><span class="closed-txt">Show chapters</span><span class="open-txt">Hide chapters</span></summary>
+            <ol class="chapters">
+              <li><label for="ma1"><span class="tick"></span><span><b>Limits and continuity</b><small>One-sided limits, squeeze theorem</small></span></label></li>
+              <li><label for="ma2"><span class="tick"></span><span><b>Derivatives</b><small>First principles, product and chain rule</small></span></label></li>
+              <li><label for="ma3"><span class="tick"></span><span><b>Applications of derivatives</b><small>Maxima, minima, rate of change</small></span></label></li>
+              <li><label for="ma4"><span class="tick"></span><span><b>Indefinite integrals</b><small>Substitution, integration by parts</small></span></label></li>
+              <li><label for="ma5"><span class="tick"></span><span><b>Definite integrals</b><small>Area under curves, properties</small></span></label></li>
+              <li><label for="ma6"><span class="tick"></span><span><b>Differential equations</b><small>Order, degree, variable separable</small></span></label></li>
+            </ol>
+          </details>
+          <span class="complete">Complete</span>
+        </article>
+
+        <!-- Physics -->
+        <article class="subject" style="--c:#5EA3C8">
+          <input type="checkbox" class="vh cin" id="ph1" checked><input type="checkbox" class="vh cin" id="ph2" checked><input type="checkbox" class="vh cin" id="ph3" checked><input type="checkbox" class="vh cin" id="ph4"><input type="checkbox" class="vh cin" id="ph5"><input type="checkbox" class="vh cin" id="ph6">
+          <header>
+            <h3>Physics</h3>
+            <p class="exam">Mid-term on 20 Nov</p>
+            <div class="beads" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <p class="count" data-total="6"></p>
+          </header>
+          <details open>
+            <summary><span class="closed-txt">Show chapters</span><span class="open-txt">Hide chapters</span></summary>
+            <ol class="chapters">
+              <li><label for="ph1"><span class="tick"></span><span><b>Units and measurement</b><small>SI units, significant figures, errors</small></span></label></li>
+              <li><label for="ph2"><span class="tick"></span><span><b>Kinematics</b><small>Motion graphs, projectile motion</small></span></label></li>
+              <li><label for="ph3"><span class="tick"></span><span><b>Laws of motion</b><small>Newton's laws, friction, free-body diagrams</small></span></label></li>
+              <li><label for="ph4"><span class="tick"></span><span><b>Work, energy and power</b><small>Work-energy theorem, collisions</small></span></label></li>
+              <li><label for="ph5"><span class="tick"></span><span><b>Gravitation</b><small>Kepler's laws, escape velocity</small></span></label></li>
+              <li><label for="ph6"><span class="tick"></span><span><b>Thermodynamics</b><small>Laws, heat engines, entropy</small></span></label></li>
+            </ol>
+          </details>
+          <span class="complete">Complete</span>
+        </article>
+
+        <!-- Chemistry -->
+        <article class="subject" style="--c:#6FB59A">
+          <input type="checkbox" class="vh cin" id="ch1" checked><input type="checkbox" class="vh cin" id="ch2" checked><input type="checkbox" class="vh cin" id="ch3"><input type="checkbox" class="vh cin" id="ch4"><input type="checkbox" class="vh cin" id="ch5"><input type="checkbox" class="vh cin" id="ch6">
+          <header>
+            <h3>Chemistry</h3>
+            <p class="exam">Practical exam on 25 Nov</p>
+            <div class="beads" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <p class="count" data-total="6"></p>
+          </header>
+          <details>
+            <summary><span class="closed-txt">Show chapters</span><span class="open-txt">Hide chapters</span></summary>
+            <ol class="chapters">
+              <li><label for="ch1"><span class="tick"></span><span><b>Atomic structure</b><small>Quantum numbers, electron configuration</small></span></label></li>
+              <li><label for="ch2"><span class="tick"></span><span><b>Periodic table</b><small>Trends in radius, ionisation energy</small></span></label></li>
+              <li><label for="ch3"><span class="tick"></span><span><b>Chemical bonding</b><small>Lewis structures, VSEPR, hybridisation</small></span></label></li>
+              <li><label for="ch4"><span class="tick"></span><span><b>States of matter</b><small>Gas laws, ideal gas equation</small></span></label></li>
+              <li><label for="ch5"><span class="tick"></span><span><b>Equilibrium</b><small>Le Chatelier, pH and buffers</small></span></label></li>
+              <li><label for="ch6"><span class="tick"></span><span><b>Organic chemistry basics</b><small>IUPAC naming, isomerism</small></span></label></li>
+            </ol>
+          </details>
+          <span class="complete">Complete</span>
+        </article>
+
+        <!-- Computer Science -->
+        <article class="subject" style="--c:#E0A95A">
+          <input type="checkbox" class="vh cin" id="cs1" checked><input type="checkbox" class="vh cin" id="cs2" checked><input type="checkbox" class="vh cin" id="cs3" checked><input type="checkbox" class="vh cin" id="cs4" checked><input type="checkbox" class="vh cin" id="cs5"><input type="checkbox" class="vh cin" id="cs6">
+          <header>
+            <h3>Computer Science</h3>
+            <p class="exam">Coding assessment on 18 Nov</p>
+            <div class="beads" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <p class="count" data-total="6"></p>
+          </header>
+          <details>
+            <summary><span class="closed-txt">Show chapters</span><span class="open-txt">Hide chapters</span></summary>
+            <ol class="chapters">
+              <li><label for="cs1"><span class="tick"></span><span><b>Intro to programming</b><small>Algorithms, flowcharts, pseudocode</small></span></label></li>
+              <li><label for="cs2"><span class="tick"></span><span><b>Data types and variables</b><small>int, float, string, type casting</small></span></label></li>
+              <li><label for="cs3"><span class="tick"></span><span><b>Control flow</b><small>if/else, for and while loops</small></span></label></li>
+              <li><label for="cs4"><span class="tick"></span><span><b>Functions</b><small>Parameters, return values, scope</small></span></label></li>
+              <li><label for="cs5"><span class="tick"></span><span><b>Arrays and strings</b><small>Indexing, slicing, common methods</small></span></label></li>
+              <li><label for="cs6"><span class="tick"></span><span><b>Object-oriented programming</b><small>Classes, objects, inheritance</small></span></label></li>
+            </ol>
+          </details>
+          <span class="complete">Complete</span>
+        </article>
+
+        <!-- English -->
+        <article class="subject" style="--c:#D98AA6">
+          <input type="checkbox" class="vh cin" id="en1" checked><input type="checkbox" class="vh cin" id="en2"><input type="checkbox" class="vh cin" id="en3"><input type="checkbox" class="vh cin" id="en4"><input type="checkbox" class="vh cin" id="en5"><input type="checkbox" class="vh cin" id="en6">
+          <header>
+            <h3>English</h3>
+            <p class="exam">Essay submission on 30 Nov</p>
+            <div class="beads" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            <p class="count" data-total="6"></p>
+          </header>
+          <details>
+            <summary><span class="closed-txt">Show chapters</span><span class="open-txt">Hide chapters</span></summary>
+            <ol class="chapters">
+              <li><label for="en1"><span class="tick"></span><span><b>Reading comprehension</b><small>Unseen passages, inference questions</small></span></label></li>
+              <li><label for="en2"><span class="tick"></span><span><b>Grammar</b><small>Tenses, active and passive voice</small></span></label></li>
+              <li><label for="en3"><span class="tick"></span><span><b>Poetry analysis</b><small>Imagery, tone, figures of speech</small></span></label></li>
+              <li><label for="en4"><span class="tick"></span><span><b>Novel study</b><small>Characters, themes, key passages</small></span></label></li>
+              <li><label for="en5"><span class="tick"></span><span><b>Essay writing</b><small>Thesis, structure, persuasive devices</small></span></label></li>
+              <li><label for="en6"><span class="tick"></span><span><b>Formal letters</b><small>Format, tone, complaint and request letters</small></span></label></li>
+            </ol>
+          </details>
+          <span class="complete">Complete</span>
+        </article>
+
+        <!-- New subject slot 1 -->
+        <article class="subject slot slot-1" style="--c:var(--tide)">
+          <input type="checkbox" class="vh cin-s" id="n1a"><input type="checkbox" class="vh cin-s" id="n1b"><input type="checkbox" class="vh cin-s" id="n1c"><input type="checkbox" class="vh cin-s" id="n1d">
+          <header>
+            <h3 contenteditable="true" data-ph="Subject name"></h3>
+            <p class="exam" contenteditable="true" data-ph="Exam or deadline"></p>
+            <div class="beads" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <p class="count" data-total="4"></p>
+          </header>
+          <details open>
+            <summary><span class="closed-txt">Show chapters</span><span class="open-txt">Hide chapters</span></summary>
+            <ol class="chapters">
+              <li><div class="row"><label for="n1a" class="tick" aria-label="Mark chapter 1 done"></label><span contenteditable="true" data-ph="Chapter 1"></span></div></li>
+              <li><div class="row"><label for="n1b" class="tick" aria-label="Mark chapter 2 done"></label><span contenteditable="true" data-ph="Chapter 2"></span></div></li>
+              <li><div class="row"><label for="n1c" class="tick" aria-label="Mark chapter 3 done"></label><span contenteditable="true" data-ph="Chapter 3"></span></div></li>
+              <li><div class="row"><label for="n1d" class="tick" aria-label="Mark chapter 4 done"></label><span contenteditable="true" data-ph="Chapter 4"></span></div></li>
+            </ol>
+          </details>
+          <label for="ns1" class="slot-remove">Remove subject</label>
+          <span class="complete">Complete</span>
+        </article>
+
+        <!-- New subject slot 2 -->
+        <article class="subject slot slot-2" style="--c:var(--lilac)">
+          <input type="checkbox" class="vh cin-s" id="n2a"><input type="checkbox" class="vh cin-s" id="n2b"><input type="checkbox" class="vh cin-s" id="n2c"><input type="checkbox" class="vh cin-s" id="n2d">
+          <header>
+            <h3 contenteditable="true" data-ph="Subject name"></h3>
+            <p class="exam" contenteditable="true" data-ph="Exam or deadline"></p>
+            <div class="beads" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <p class="count" data-total="4"></p>
+          </header>
+          <details open>
+            <summary><span class="closed-txt">Show chapters</span><span class="open-txt">Hide chapters</span></summary>
+            <ol class="chapters">
+              <li><div class="row"><label for="n2a" class="tick" aria-label="Mark chapter 1 done"></label><span contenteditable="true" data-ph="Chapter 1"></span></div></li>
+              <li><div class="row"><label for="n2b" class="tick" aria-label="Mark chapter 2 done"></label><span contenteditable="true" data-ph="Chapter 2"></span></div></li>
+              <li><div class="row"><label for="n2c" class="tick" aria-label="Mark chapter 3 done"></label><span contenteditable="true" data-ph="Chapter 3"></span></div></li>
+              <li><div class="row"><label for="n2d" class="tick" aria-label="Mark chapter 4 done"></label><span contenteditable="true" data-ph="Chapter 4"></span></div></li>
+            </ol>
+          </details>
+          <label for="ns2" class="slot-remove">Remove subject</label>
+          <span class="complete">Complete</span>
+        </article>
+      </div>
+      <!-- after the subjects so the CSS counter can total them; shown above via order -->
+      <p class="syl-summary"></p>
+    </section>
+
+    <!-- ============ TASKS ============ -->
+    <section id="tasks" class="page">
+      <div class="page-head">
+        <h1>Tasks</h1>
+        <p>Everything due this week and next. Tap a circle to complete, or Edit to change the title, notes, due date and priority.</p>
+      </div>
+
+      <div class="filters">
+        <div class="chipset" role="radiogroup" aria-label="Filter by status">
+          <span class="lbl">Status</span>
+          <input type="radio" name="status" id="st-all" class="vh" checked><label for="st-all">All</label>
+          <input type="radio" name="status" id="st-open" class="vh"><label for="st-open">To do</label>
+          <input type="radio" name="status" id="st-done" class="vh"><label for="st-done">Completed</label>
+        </div>
+        <div class="chipset" role="radiogroup" aria-label="Filter by priority">
+          <span class="lbl">Priority</span>
+          <input type="radio" name="prio" id="pr-all" class="vh" checked><label for="pr-all">Any</label>
+          <input type="radio" name="prio" id="pr-h" class="vh"><label for="pr-h">High</label>
+          <input type="radio" name="prio" id="pr-m" class="vh"><label for="pr-m">Medium</label>
+          <input type="radio" name="prio" id="pr-l" class="vh"><label for="pr-l">Low</label>
+        </div>
+      </div>
+
+      <form class="board" action="#tasks">
+        <input type="checkbox" id="nt1" class="vh"><input type="checkbox" id="nt2" class="vh"><input type="checkbox" id="nt3" class="vh">
+        <div class="board-tools">
+          <div class="left new-task">
+            <label for="nt1" class="btn primary">+ New task</label>
+            <label for="nt2" class="btn primary">+ New task</label>
+            <label for="nt3" class="btn primary">+ New task</label>
+            <span class="full">Three new task slots are open below.</span>
+          </div>
+          <div class="left">
+            <button type="reset" class="btn">Reset board</button>
+            <span class="reset-note">Brings back deleted tasks</span>
+          </div>
+        </div>
+
+        <!-- new task slots (edit mode on by default) -->
+        <article class="task slot slot-t1">
+          <input type="checkbox" class="vh done" id="s1-done"><input type="checkbox" class="vh del" id="s1-del"><input type="checkbox" class="vh edit" id="s1-edit" checked>
+          <label class="check" for="s1-done" aria-label="Mark complete"></label>
+          <div>
+            <h3 contenteditable="true" data-ph="Task title"></h3>
+            <p class="desc" contenteditable="true" data-ph="Add a short description"></p>
+            <div class="meta"><span class="due">Due <input type="date" value="2026-10-19" aria-label="Due date"></span><span class="badge"></span><span class="status"></span></div>
+            <fieldset class="prio-edit"><legend>Priority</legend>
+              <input type="radio" name="s1p" id="s1h" class="vh ph-h"><label for="s1h">High</label>
+              <input type="radio" name="s1p" id="s1m" class="vh ph-m" checked><label for="s1m">Medium</label>
+              <input type="radio" name="s1p" id="s1l" class="vh ph-l"><label for="s1l">Low</label>
+            </fieldset>
+            <p class="edit-hint">Type straight into the title and description, then press Save.</p>
+          </div>
+          <div class="actions"><label for="s1-edit" class="edit-l"><span class="edit-txt">Edit</span><span class="save-txt">Save</span></label><label for="s1-del" class="del-l">Delete</label></div>
+        </article>
+        <article class="task slot slot-t2">
+          <input type="checkbox" class="vh done" id="s2-done"><input type="checkbox" class="vh del" id="s2-del"><input type="checkbox" class="vh edit" id="s2-edit" checked>
+          <label class="check" for="s2-done" aria-label="Mark complete"></label>
+          <div>
+            <h3 contenteditable="true" data-ph="Task title"></h3>
+            <p class="desc" contenteditable="true" data-ph="Add a short description"></p>
+            <div class="meta"><span class="due">Due <input type="date" value="2026-10-19" aria-label="Due date"></span><span class="badge"></span><span class="status"></span></div>
+            <fieldset class="prio-edit"><legend>Priority</legend>
+              <input type="radio" name="s2p" id="s2h" class="vh ph-h"><label for="s2h">High</label>
+              <input type="radio" name="s2p" id="s2m" class="vh ph-m" checked><label for="s2m">Medium</label>
+              <input type="radio" name="s2p" id="s2l" class="vh ph-l"><label for="s2l">Low</label>
+            </fieldset>
+            <p class="edit-hint">Type straight into the title and description, then press Save.</p>
+          </div>
+          <div class="actions"><label for="s2-edit" class="edit-l"><span class="edit-txt">Edit</span><span class="save-txt">Save</span></label><label for="s2-del" class="del-l">Delete</label></div>
+        </article>
+        <article class="task slot slot-t3">
+          <input type="checkbox" class="vh done" id="s3-done"><input type="checkbox" class="vh del" id="s3-del"><input type="checkbox" class="vh edit" id="s3-edit" checked>
+          <label class="check" for="s3-done" aria-label="Mark complete"></label>
+          <div>
+            <h3 contenteditable="true" data-ph="Task title"></h3>
+            <p class="desc" contenteditable="true" data-ph="Add a short description"></p>
+            <div class="meta"><span class="due">Due <input type="date" value="2026-10-19" aria-label="Due date"></span><span class="badge"></span><span class="status"></span></div>
+            <fieldset class="prio-edit"><legend>Priority</legend>
+              <input type="radio" name="s3p" id="s3h" class="vh ph-h"><label for="s3h">High</label>
+              <input type="radio" name="s3p" id="s3m" class="vh ph-m" checked><label for="s3m">Medium</label>
+              <input type="radio" name="s3p" id="s3l" class="vh ph-l"><label for="s3l">Low</label>
+            </fieldset>
+            <p class="edit-hint">Type straight into the title and description, then press Save.</p>
+          </div>
+          <div class="actions"><label for="s3-edit" class="edit-l"><span class="edit-txt">Edit</span><span class="save-txt">Save</span></label><label for="s3-del" class="del-l">Delete</label></div>
+        </article>
+
+        <!-- Task 1 -->
+        <article class="task">
+          <input type="checkbox" class="vh done" id="t1-done"><input type="checkbox" class="vh del" id="t1-del"><input type="checkbox" class="vh edit" id="t1-edit">
+          <label class="check" for="t1-done" aria-label="Mark complete"></label>
+          <div>
+            <h3 contenteditable="true">Derivatives worksheet</h3>
+            <p class="desc" contenteditable="true">Questions 1 to 20 from chapter 2. Show full working for the chain-rule ones.</p>
+            <div class="meta"><span class="due">Due <input type="date" value="2026-10-13" aria-label="Due date"></span><span class="badge"></span><span class="status"></span></div>
+            <fieldset class="prio-edit"><legend>Priority</legend>
+              <input type="radio" name="t1p" id="t1h" class="vh ph-h" checked><label for="t1h">High</label>
+              <input type="radio" name="t1p" id="t1m" class="vh ph-m"><label for="t1m">Medium</label>
+              <input type="radio" name="t1p" id="t1l" class="vh ph-l"><label for="t1l">Low</label>
+            </fieldset>
+            <p class="edit-hint">Type straight into the title and description, then press Save.</p>
+          </div>
+          <div class="actions"><label for="t1-edit" class="edit-l"><span class="edit-txt">Edit</span><span class="save-txt">Save</span></label><label for="t1-del" class="del-l">Delete</label></div>
+        </article>
+
+        <!-- Task 2 -->
+        <article class="task">
+          <input type="checkbox" class="vh done" id="t2-done"><input type="checkbox" class="vh del" id="t2-del"><input type="checkbox" class="vh edit" id="t2-edit">
+          <label class="check" for="t2-done" aria-label="Mark complete"></label>
+          <div>
+            <h3 contenteditable="true">Free-fall lab report</h3>
+            <p class="desc" contenteditable="true">Plot distance against time squared and add an error analysis section.</p>
+            <div class="meta"><span class="due">Due <input type="date" value="2026-10-15" aria-label="Due date"></span><span class="badge"></span><span class="status"></span></div>
+            <fieldset class="prio-edit"><legend>Priority</legend>
+              <input type="radio" name="t2p" id="t2h" class="vh ph-h" checked><label for="t2h">High</label>
+              <input type="radio" name="t2p" id="t2m" class="vh ph-m"><label for="t2m">Medium</label>
+              <input type="radio" name="t2p" id="t2l" class="vh ph-l"><label for="t2l">Low</label>
+            </fieldset>
+            <p class="edit-hint">Type straight into the title and description, then press Save.</p>
+          </div>
+          <div class="actions"><label for="t2-edit" class="edit-l"><span class="edit-txt">Edit</span><span class="save-txt">Save</span></label><label for="t2-del" class="del-l">Delete</label></div>
+        </article>
+
+        <!-- Task 3 -->
+        <article class="task">
+          <input type="checkbox" class="vh done" id="t3-done" checked><input type="checkbox" class="vh del" id="t3-del"><input type="checkbox" class="vh edit" id="t3-edit">
+          <label class="check" for="t3-done" aria-label="Mark complete"></label>
+          <div>
+            <h3 contenteditable="true">Periodic trends flashcards</h3>
+            <p class="desc" contenteditable="true">Make 30 cards on atomic radius, electronegativity and ionisation energy.</p>
+            <div class="meta"><span class="due">Due <input type="date" value="2026-10-14" aria-label="Due date"></span><span class="badge"></span><span class="status"></span></div>
+            <fieldset class="prio-edit"><legend>Priority</legend>
+              <input type="radio" name="t3p" id="t3h" class="vh ph-h"><label for="t3h">High</label>
+              <input type="radio" name="t3p" id="t3m" class="vh ph-m" checked><label for="t3m">Medium</label>
+              <input type="radio" name="t3p" id="t3l" class="vh ph-l"><label for="t3l">Low</label>
+            </fieldset>
+            <p class="edit-hint">Type straight into the title and description, then press Save.</p>
+          </div>
+          <div class="actions"><label for="t3-edit" class="edit-l"><span class="edit-txt">Edit</span><span class="save-txt">Save</span></label><label for="t3-del" class="del-l">Delete</label></div>
+        </article>
+
+        <!-- Task 4 -->
+        <article class="task">
+          <input type="checkbox" class="vh done" id="t4-done" checked><input type="checkbox" class="vh del" id="t4-del"><input type="checkbox" class="vh edit" id="t4-edit">
+          <label class="check" for="t4-done" aria-label="Mark complete"></label>
+          <div>
+            <h3 contenteditable="true">Reverse-a-string function</h3>
+            <p class="desc" contenteditable="true">Write it twice: once with a loop, once with slicing. Add three test cases.</p>
+            <div class="meta"><span class="due">Due <input type="date" value="2026-10-13" aria-label="Due date"></span><span class="badge"></span><span class="status"></span></div>
+            <fieldset class="prio-edit"><legend>Priority</legend>
+              <input type="radio" name="t4p" id="t4h" class="vh ph-h"><label for="t4h">High</label>
+              <input type="radio" name="t4p" id="t4m" class="vh ph-m" checked><label for="t4m">Medium</label>
+              <input type="radio" name="t4p" id="t4l" class="vh ph-l"><label for="t4l">Low</label>
+            </fieldset>
+            <p class="edit-hint">Type straight into the title and description, then press Save.</p>
+          </div>
+          <div class="actions"><label for="t4-edit" class="edit-l"><span class="edit-txt">Edit</span><span class="save-txt">Save</span></label><label for="t4-del" class="del-l">Delete</label></div>
+        </article>
+
+        <!-- Task 5 -->
+        <article class="task">
+          <input type="checkbox" class="vh done" id="t5-done"><input type="checkbox" class="vh del" id="t5-del"><input type="checkbox" class="vh edit" id="t5-edit">
+          <label class="check" for="t5-done" aria-label="Mark complete"></label>
+          <div>
+            <h3 contenteditable="true">Name 15 organic compounds</h3>
+            <p class="desc" contenteditable="true">IUPAC practice sheet from the chemistry lab. Check answers with Priya.</p>
+            <div class="meta"><span class="due">Due <input type="date" value="2026-10-16" aria-label="Due date"></span><span class="badge"></span><span class="status"></span></div>
+            <fieldset class="prio-edit"><legend>Priority</legend>
+              <input type="radio" name="t5p" id="t5h" class="vh ph-h" checked><label for="t5h">High</label>
+              <input type="radio" name="t5p" id="t5m" class="vh ph-m"><label for="t5m">Medium</label>
+              <input type="radio" name="t5p" id="t5l" class="vh ph-l"><label for="t5l">Low</label>
+            </fieldset>
+            <p class="edit-hint">Type straight into the title and description, then press Save.</p>
+          </div>
+          <div class="actions"><label for="t5-edit" class="edit-l"><span class="edit-txt">Edit</span><span class="save-txt">Save</span></label><label for="t5-del" class="del-l">Delete</label></div>
+        </article>
+
+        <!-- Task 6 -->
+        <article class="task">
+          <input type="checkbox" class="vh done" id="t6-done"><input type="checkbox" class="vh del" id="t6-del"><input type="checkbox" class="vh edit" id="t6-edit">
+          <label class="check" for="t6-done" aria-label="Mark complete"></label>
+          <div>
+            <h3 contenteditable="true">Persuasive essay outline</h3>
+            <p class="desc" contenteditable="true">Pick a topic, write the thesis and three supporting points.</p>
+            <div class="meta"><span class="due">Due <input type="date" value="2026-10-17" aria-label="Due date"></span><span class="badge"></span><span class="status"></span></div>
+            <fieldset class="prio-edit"><legend>Priority</legend>
+              <input type="radio" name="t6p" id="t6h" class="vh ph-h"><label for="t6h">High</label>
+              <input type="radio" name="t6p" id="t6m" class="vh ph-m"><label for="t6m">Medium</label>
+              <input type="radio" name="t6p" id="t6l" class="vh ph-l" checked><label for="t6l">Low</label>
+            </fieldset>
+            <p class="edit-hint">Type straight into the title and description, then press Save.</p>
+          </div>
+          <div class="actions"><label for="t6-edit" class="edit-l"><span class="edit-txt">Edit</span><span class="save-txt">Save</span></label><label for="t6-del" class="del-l">Delete</label></div>
+        </article>
+
+        <!-- Task 7 -->
+        <article class="task">
+          <input type="checkbox" class="vh done" id="t7-done"><input type="checkbox" class="vh del" id="t7-del"><input type="checkbox" class="vh edit" id="t7-edit">
+          <label class="check" for="t7-done" aria-label="Mark complete"></label>
+          <div>
+            <h3 contenteditable="true">Read chapters 4 to 6 of the novel</h3>
+            <p class="desc" contenteditable="true">Note one quote per chapter that shows the main character changing.</p>
+            <div class="meta"><span class="due">Due <input type="date" value="2026-10-18" aria-label="Due date"></span><span class="badge"></span><span class="status"></span></div>
+            <fieldset class="prio-edit"><legend>Priority</legend>
+              <input type="radio" name="t7p" id="t7h" class="vh ph-h"><label for="t7h">High</label>
+              <input type="radio" name="t7p" id="t7m" class="vh ph-m"><label for="t7m">Medium</label>
+              <input type="radio" name="t7p" id="t7l" class="vh ph-l" checked><label for="t7l">Low</label>
+            </fieldset>
+            <p class="edit-hint">Type straight into the title and description, then press Save.</p>
+          </div>
+          <div class="actions"><label for="t7-edit" class="edit-l"><span class="edit-txt">Edit</span><span class="save-txt">Save</span></label><label for="t7-del" class="del-l">Delete</label></div>
+        </article>
+
+        <!-- Task 8 -->
+        <article class="task">
+          <input type="checkbox" class="vh done" id="t8-done"><input type="checkbox" class="vh del" id="t8-del"><input type="checkbox" class="vh edit" id="t8-edit">
+          <label class="check" for="t8-done" aria-label="Mark complete"></label>
+          <div>
+            <h3 contenteditable="true">Thermodynamics group slides</h3>
+            <p class="desc" contenteditable="true">My part: the second law and heat engines. Four slides, one diagram each.</p>
+            <div class="meta"><span class="due">Due <input type="date" value="2026-10-20" aria-label="Due date"></span><span class="badge"></span><span class="status"></span></div>
+            <fieldset class="prio-edit"><legend>Priority</legend>
+              <input type="radio" name="t8p" id="t8h" class="vh ph-h"><label for="t8h">High</label>
+              <input type="radio" name="t8p" id="t8m" class="vh ph-m" checked><label for="t8m">Medium</label>
+              <input type="radio" name="t8p" id="t8l" class="vh ph-l"><label for="t8l">Low</label>
+            </fieldset>
+            <p class="edit-hint">Type straight into the title and description, then press Save.</p>
+          </div>
+          <div class="actions"><label for="t8-edit" class="edit-l"><span class="edit-txt">Edit</span><span class="save-txt">Save</span></label><label for="t8-del" class="del-l">Delete</label></div>
+        </article>
+      </form>
+
+      <!-- placed last so CSS counters see every task; shown visually above the list -->
+      <div class="task-stats">
+        <span class="s1"></span><span class="s2"></span><span class="s3"></span>
+      </div>
+    </section>
+  </main>
+</div>
+</body>
+</html>
